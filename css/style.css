@@ -1,0 +1,777 @@
+@import url('../css/fonts.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* ---------variables----------------------- */
+:root{
+
+ /* ---colors---- ---*/
+    --text-grey:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+
+/* ---font-family------ */
+--Lexend:'Lexend',cursive;
+--Roboto:'Roboto',cursive;
+--Roboto-Bold:'Roboto-Bold',bold;
+}
+
+
+/* ------x---variables------x----------------- */
+/* -----------------loader---------------- */
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+  
+/* -----x------------loader----------x------ */
+/*===================banner============================*/
+
+
+
+#banner{
+    background: url(../images/bg-colors/orange-blue--background.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --------------header------------------- */
+
+
+header{
+    width: 100%;
+}
+
+header nav{
+    width: 100%;
+    height: 4rem;
+    padding: 2rem;
+}
+
+header nav h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    float: left;
+}
+
+header nav ul{
+    float: right;
+    list-style: none;
+    padding: 1.8rem;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding-right: 4rem;
+}
+
+header nav ul li a{
+    color: var(--bg-color);
+    text-decoration: none !important;
+    font: normal 500 15px/2px var(--Roboto);
+    text-transform: uppercase;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* -----x---------header------------x------- */
+
+/* -----------------banner-text-area------------------ */
+
+
+#banner .banner-text-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    flex-direction: column;
+}
+
+#banner .banner-text-area h1{
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: var(--Roboto-Bold);
+    line-height: 1em;
+    margin-top: 15rem;
+}
+
+#banner .banner-text-area h1 > span{
+    font-size: 11rem;
+}
+
+#banner .banner-text-area button{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-left: -14rem;
+    margin-top: 3rem;
+    background: rgb(120, 110, 182);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+}
+
+#banner .banner-text-area button:hover{
+    background: #cf445c;
+}
+
+/* ---x--------------banner-text-area---------x--------- */
+/* ---------------banner-img-area------------------ */
+
+#banner .banner-img-area .img{
+    height: 70vh;
+
+}
+#banner .banner-img-area .img img{
+    margin-top: 3rem;
+    width: 86%;
+    height: 100%;
+}
+
+#banner .banner-img-area .next-prev{
+    width: 120px;
+    margin: 4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#banner .banner-img-area .next-prev img{
+    width: 45px;
+    cursor: pointer;
+}
+
+#banner .banner-img-area .vertical-line{
+    width: 2px;
+    height: 30px;
+    background: #b5e3cf;
+}
+/* -x--------------banner-img-area-----------------x- */
+
+/*========x===========banner=============x===============*/
+
+
+
+/* ======================AboutUs======================= */
+#about{
+    min-height: 100vh;
+    padding-top: 9rem;
+}
+/* ---------------img-part------------------- */
+#about .about-img-part img{
+    width: 100%;
+}
+
+#about .about-text{
+    padding: 3rem 2rem 5rem 5rem  ;
+}
+
+#about .about-text h1{
+    text-transform: uppercase;
+    font-family: var(--Lexend);
+    letter-spacing: 2px;
+    font-weight: 900;
+    
+}
+
+#about .about-text p{
+    font-family: var(--Roboto);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-grey);
+}
+
+
+/* -----x----------img-part---------------x---- */
+
+/* ===========x===========AboutUs======================= */
+.heading-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+.heading-text .headings{
+    text-transform: uppercase;
+    font-family: var(--Lexend);
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+
+/* ==============services================================== */
+#services{
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+#services .services-items{
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    margin-left: 8rem;
+    padding: 2rem;
+}
+
+
+#sevices .services-items .service-img{
+    width: 100%;
+    height: 50%;
+}
+
+
+#services .services-items .service-img img{
+    width: 100%;
+    height: 20rem;
+}
+
+#services .services-items .service-info h4{
+    font-weight: 800;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+/* =====x=========services======================x============ */
+
+/* =================gallery================================== */
+#gallery{
+    margin-top: 12rem;
+    padding-top: 5rem;
+    min-height: 100vh;
+    padding-bottom:10rem ;
+}
+#gallery .gallery-images{
+    margin: 2rem auto;
+}
+#gallery img{
+    width: 100%;
+    height: 30rem;
+}
+
+
+
+
+/* =====x===========gallery======================x============ */
+
+
+/* ================Contact================================== */
+#contact{
+    min-height: 100vh;
+}
+#contact .contact-details ul{
+    list-style: none;
+
+}
+ 
+#contact .contact-details .icon{
+    background: #cf445c;
+    width: 5rem;
+    height: 4rem;
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#contact .contact-details .icon i{
+    font-size: 22px;
+
+}
+
+#contact .contact-details .details-text{
+    font-family: var(--Roboto);
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-left: 3rem;
+}
+
+#contact .contact-details .details-text h1{
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+#contact .contact-details .details-text h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+
+}
+#contact .contact-details .details-text hr{
+    margin-left: -8rem;
+    background: rgb(216, 155, 155);
+    height: 2px;
+    width: 25vw;
+}
+
+/* -------------message-------------------- */
+#contact .Message{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .Message input{
+    padding: 1.5rem;
+    margin-top: 2rem;  
+}
+
+#contact .Message input.message-box{
+   height: 15rem;
+   padding-top:1rem !important;
+   display: flex;
+}
+
+
+#contact .Message button{
+    margin-top: 4rem;
+    outline: none;
+    padding: 1rem;
+    background: #cf445c;
+    color: #fff;
+    font-family: var(--Roboto);
+    text-transform: uppercase;
+}
+
+#contact .Message button > span > i{
+    padding: .5rem;
+    font-size: 20px;
+}
+
+
+
+/* ----x---------message------------x-------- */
+
+
+/* =====x===========Contact======================x============ */
+
+/* ===================items==================================== */
+#available-items{
+    margin-top: 5rem;
+    background: #f0f2f8;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+
+#available-items a{
+    outline: none;
+}
+
+#available-items .heading-text h1{
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.5em;
+}
+
+.clients {
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    padding-bottom: 10rem;
+}
+.clients img{
+    width: 100%;
+    height: 20rem;
+    
+}
+.clients .item {
+    text-align: center;
+    margin-left: 3rem;
+}
+
+/* =====x==============items===========================x========= */
+/* ========================footer=================================== */
+footer{
+    background: #3f4954;
+    height: 20rem;
+    padding-top: 2rem;
+
+}
+
+footer nav{
+    width: 100%;
+
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer nav ul li{
+    display: inline-block;
+    padding-right: 3rem;
+}
+
+footer nav ul li a{
+    text-decoration: none !important;
+    color: var(--white);
+    font: normal 500 15px/2px var(--Roboto);
+    text-transform: uppercase;
+}
+
+footer nav ul li a:hover{
+    color: #cf445c;
+}
+
+footer .copy-right{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font: normal 500 2rem var(--Roboto);
+}
+
+footer .copy-right strong{
+    margin-left: 2.5rem;
+}
+
+footer img{
+    position: absolute;
+    right: 7rem;
+    cursor: pointer;
+}
+
+
+
+
+/* ======x==================footer=================================== */
+
+
+/* ========================media query=============================== */
+@media only screen and (max-width:768px){
+header nav ul{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 70%;
+   background: #3f4954;
+   height: 100%;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   transform: translateX(-100%); 
+   transition: transform .2s;
+}
+
+header nav ul li{
+    margin-top: 4rem;
+}
+
+
+header nav ul li a{
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header nav ul li a:hover{
+    color: #cf445c;
+    cursor: pointer;
+}
+
+nav::before{
+    position: fixed;
+    content: '';
+    background: #0f0f0f;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.open  nav::before{
+    opacity: 0.7;
+    visibility: visible;
+}
+
+
+
+.menu-toggle{
+    background: url(../images/icons/menu.png);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 4rem;
+    top: 2rem;
+    margin-top: 1rem;
+    z-index: 7;
+    display: initial;
+    opacity: 1;
+}
+
+.menu-toggle.active{
+    background: url(../images/icons/close.png);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 30px;
+    position: fixed;
+}
+
+header nav ul.active{
+    transform: translateX(0%); 
+}
+
+ 
+
+#banner .banner-text-area h1 {
+    margin-top: 0;
+    margin-left: 15rem;
+}
+#banner .banner-text-area button {
+    margin-left: 0;
+}
+#banner .banner-img-area .img img {
+    margin-top: 4rem;
+    width: 78%;
+    margin-left: 5rem;
+}
+#banner .banner-img-area .next-prev {
+    margin: 8rem 15rem;
+}
+
+#about .about-content{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#about .about-text h1 {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+#services {
+    margin-top: 9rem;
+}
+
+#services .service-content{
+    padding: 5rem;
+}
+
+#services .services-items {
+    margin-left: 0rem;
+    margin-bottom: 7rem;
+}
+
+
+#gallery .gallery-content{
+    padding: 5rem;
+}
+#contact .contact-details{
+    padding-left: 11rem;
+}
+
+
+#contact .contact-details ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .Message {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+
+}
+
+
+
+@media only screen and (max-width:550px){
+    header nav h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        float: left;
+        padding: 3rem;
+        padding-top: 0rem;
+        margin-left: -5rem;
+        margin-top: 0rem;
+    }
+    
+    .menu-toggle {
+        right: 2rem;
+        top: 0.5rem;
+        margin-top: 1rem;
+    }
+    #banner .banner-text-area h1 > span {
+        font-size: 8rem;
+    }
+    
+    #banner .banner-text-area h1 {
+        margin-top: 8rem;
+        margin-left: 3rem;
+        font-size: 6rem;
+    }
+    
+    #banner .banner-img-area .next-prev {
+        margin: 9rem 4rem;
+    }
+  
+
+#available-items .heading-text h1{
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 1.5em;
+}
+
+
+#contact .Message {
+    padding: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+
+#contact .contact-details {
+    padding-left: 6rem;
+}
+
+#contact .contact-details .details-text hr {
+    margin-left: -8rem;
+    background: rgb(216, 155, 155);
+    height: 2px;
+    width: 74vw;
+}
+
+
+footer nav ul {
+    list-style: none;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer nav ul li a {
+    text-decoration: none !important;
+    color: var(--white);
+    font: normal 500 15px/2em var(--Roboto);
+    text-transform: uppercase;
+}
+
+#gallery .gallery-content {
+    padding: 1rem;
+}
+
+
+
+footer {
+    background: #3f4954;
+    height: auto;
+    padding-top: 2rem;
+}
+
+footer img {
+    position: absolute;
+    right: 1rem;
+}
+
+
+}
+
+
+@media only screen and (max-width:380px){
+    #banner .banner-text-area h1 {
+        margin-top: 8rem;
+        margin-left: 3rem;
+        font-size: 5rem;
+    }
+    
+    #banner .banner-text-area h1 > span {
+        font-size: 7rem;
+    }
+    
+}
+
+@media only screen and (max-width:340px){
+    #banner .banner-text-area h1 {
+        margin-top: 8rem;
+        margin-left: 1rem;
+        font-size: 5rem;
+    }
+    
+    #banner .banner-text-area h1 > span {
+        font-size: 7rem;
+    }
+    #available-items .heading-text h1{
+        text-align: center;
+        font-size: 2.8rem;
+        line-height: 1.5em;
+    }
+    
+}
+   
+/* ========x================media query===========x==================== */

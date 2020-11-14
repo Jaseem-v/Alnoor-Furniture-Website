@@ -1,0 +1,19 @@
+
+/*  font-family: Lexend  */
+@font-face {
+    font-family: Lexend;
+    src: url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf');
+}
+
+
+/* font-family:roboto*/
+@font-face{
+      font-family: Roboto;
+      src: url('../fonts/Roboto/Roboto-Regular.ttf');
+  }
+
+
+  @font-face{
+      font-family: Roboto-Bold;
+      src: url('../fonts/Roboto/Roboto-Bold.ttf');
+  }
